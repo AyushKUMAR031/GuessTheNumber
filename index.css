@@ -1,20 +1,22 @@
 nav{
     background-color: rgb(0, 0, 0);
     color: #ffffff;
-    height: 85px;
-    font-size: 40px;
+    height: 75%;
+    font-size: 4vh;
     display: flex;
     align-items:center;
-    padding: 0 12px;
+    padding: 0 12%;
     font-family: 'IBM Plex Mono', monospace;
 }
+
+
 nav ul{
     list-style-type: none;
 }
 
 h1 {
     color:red;
-    font-size:500%;
+    font-size:10vh;
     font-family: cursive;
     text-align: center;
 }
@@ -28,13 +30,13 @@ h1 {
 #in{
     width:35%;
     margin-top:1%;
-    font-size: 27px;
+    font-size: 4vh;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #btn{
     width:38%;
-    font-size: 50px;
+    font-size: 120%;
     margin-top: 10px;
     background-color: rgb(15, 167, 15);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -43,7 +45,7 @@ h1 {
 
 #content{
     width:70%;
-    font-size: 40px;
+    font-size: 5vh;
     margin-left: 18%;
     font-family: monospace;
     color:#ffffff;
@@ -53,7 +55,7 @@ h1 {
 #count{
     color: #4765c5;
     width:70%;
-    font-size: 40px;
+    font-size: 6vh;
     margin-left: 35%;
     font-family: monospace;
 }
