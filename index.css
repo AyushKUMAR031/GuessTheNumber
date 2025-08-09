@@ -1,61 +1,123 @@
-nav{
-    background-color: rgb(0, 0, 0);
-    color: #ffffff;
-    height: 75%;
-    font-size: 4vh;
-    display: flex;
-    align-items:center;
-    padding: 0 12%;
-    font-family: 'IBM Plex Mono', monospace;
+/* Responsive navbar brand title */
+.navbar .brand-title {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  font-family: "IBM Plex Mono", monospace;
 }
 
+@media (max-width: 575.98px) {
+  .navbar .brand-title {
+    font-size: 1.2rem;
+  }
+}
+/* Responsive layout for game instructions and game area */
+.main-game-layout .game-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 
-nav ul{
-    list-style-type: none;
+@media (min-width: 992px) {
+  .main-game-layout .game-row {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+  .instructions-card,
+  .game-area-card {
+    margin-bottom: 0 !important;
+    height: 100%;
+    min-width: 340px;
+  }
+}
+nav {
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  font-size: 2.2rem;
+  font-family: "IBM Plex Mono", monospace;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 18px 18px;
+}
+
+nav ul {
+  list-style-type: none;
 }
 
 h1 {
-    color:red;
-    font-size:10vh;
-    font-family: cursive;
-    text-align: center;
+  color: #ff4c4c;
+  font-size: 3rem;
+  font-family: "Caveat", cursive;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
 }
 
-#rule{
-    color:#faf3f3;
-    display: flex;
-    justify-content:left;
-    
-}
-#in{
-    width:35%;
-    margin-top:1%;
-    font-size: 4vh;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.card {
+  background: rgba(34, 40, 49, 0.95);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border: none;
 }
 
-#btn{
-    width:38%;
-    font-size: 120%;
-    margin-top: 10px;
-    background-color: rgb(15, 167, 15);
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #ffffff;
+.alert-info {
+  background: rgba(255, 255, 255, 0.07) !important;
+  color: #faf3f3 !important;
+  border: none;
+  font-size: 1.1rem;
 }
 
-#content{
-    width:70%;
-    font-size: 5vh;
-    margin-left: 18%;
-    font-family: monospace;
-    color:#ffffff;
-    
+#in {
+  width: 100%;
+  font-size: 1.3rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 10px;
+  padding: 0.7em 1em;
+  margin-bottom: 0.5em;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 1px solid #ff4c4c;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-#count{
-    color: #4765c5;
-    width:70%;
-    font-size: 6vh;
-    margin-left: 35%;
-    font-family: monospace;
+#btn {
+  width: 100%;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  color: #232526;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(67, 233, 123, 0.15);
+  transition: background 0.2s, color 0.2s;
+}
+#btn:hover {
+  background: linear-gradient(90deg, #ff4c4c 0%, #ff9800 100%);
+  color: #fff;
+}
+
+#content {
+  width: 100%;
+  font-size: 1.3rem;
+  font-family: monospace;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 0.5em 0.8em;
+  margin-bottom: 0.5em;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+#count {
+  color: #43e97b;
+  width: 100%;
+  font-size: 1.4rem;
+  font-family: monospace;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 0.5em 0.8em;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
 }

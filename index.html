@@ -1,51 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Let's Play</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="index.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-<body class="bg-dark">
-    <nav class="navbar bg-body-black ">
-        <div class="container-fluid">
-          <img src="gameLogo.png" alt="Logo" width="50" height="40" class="d-inline-block align-text-top">
-            <span>Guess The Number Game</span>
+  </head>
+
+  <body
+    style="
+      background: linear-gradient(135deg, #232526 0%, #414345 100%);
+      min-height: 100vh;
+    "
+  >
+    <nav class="navbar navbar-expand-lg mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img
+            src="gameLogo.png"
+            alt="Logo"
+            width="50"
+            height="40"
+            class="d-inline-block align-text-top me-2"
+          />
+          <span class="brand-title">Guess The Number Game</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Add nav items here if needed -->
         </div>
+      </div>
     </nav>
 
-    <h1>Welcome To The Arena</h1>
-    <div class="container border border-danger rounded-2 row justify-content-start">
-      <pre id="rule">
-    - Game Name: Guess the Correct Number
-    - Objective: Players attempt to guess a secret number within a specified range.
-    - Rules:
-        The game host selects a random number between a minimum and maximum value (e.g., between 0 and 100).
-        Players take turns guessing the secret number.After each guess, the host provides feedback:
-          1) If the guessed number is correct, the player wins.
-          2) If the guessed number is too high, the host says, “Lower!”
-          3) If the guessed number is too low, the host says, “Higher!”
-    - Players continue guessing until someone correctly identifies the secret number or until a predetermined number of attempts is reached.
-    - The player with the correct guess wins the round.
-      </pre> 
-    </div>
-    
-    
-    <div class="container-fluid mt-5 p-2  text-center">
-      <input type="number" id="in" placeholder="Enter Your Number" min="0" max="100">
-      <br>
-      <button type="button" id="btn" onclick="checkNum()" class="btn btn-success btn-lg btn-block">Check Your Guess!!</button>
-      <br>
-    </div>
-    <div class="container border">
-      <p id="content" ></p>
-      <p id="count" ></p>
+    <div
+      class="container main-game-layout d-flex flex-column align-items-center justify-content-center"
+      style="min-height: 80vh"
+    >
+      <h1 class="mb-3">Welcome To The Arena</h1>
+      <div
+        class="game-row d-flex flex-column flex-lg-row w-100 justify-content-center align-items-stretch gap-4"
+      >
+        <div
+          class="card p-4 mb-4 instructions-card flex-fill"
+          style="max-width: 600px"
+        >
+          <div class="alert alert-info mb-0" role="alert">
+            <strong>Game Name:</strong> Guess the Correct Number<br />
+            <strong>Objective:</strong> Players attempt to guess a secret number
+            within a specified range.<br />
+            <strong>Rules:</strong>
+            <ul style="margin-left: 1em">
+              <li>
+                The game host selects a random number between a minimum and
+                maximum value (e.g., 0 and 100).
+              </li>
+              <li>
+                Players take turns guessing the secret number. After each guess,
+                the host provides feedback:
+              </li>
+              <ul>
+                <li>If the guessed number is correct, the player wins.</li>
+                <li>
+                  If the guessed number is too high, the host says, “Lower!”
+                </li>
+                <li>
+                  If the guessed number is too low, the host says, “Higher!”
+                </li>
+              </ul>
+              <li>
+                Players continue guessing until someone correctly identifies the
+                secret number or until a predetermined number of attempts is
+                reached.
+              </li>
+              <li>The player with the correct guess wins the round.</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="card p-4 mb-4 game-area-card flex-fill"
+          style="max-width: 400px"
+        >
+          <input
+            type="number"
+            id="in"
+            placeholder="Enter Your Number"
+            min="0"
+            max="100"
+          />
+          <button type="button" id="btn" onclick="checkNum()">
+            Check Your Guess!!
+          </button>
+          <p id="content" class="mt-3"></p>
+          <p id="count"></p>
+        </div>
+      </div>
     </div>
 
-
-    <script src="script.js">
-    </script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
